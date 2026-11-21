@@ -1,0 +1,23 @@
+name: arctex-emulator
+services:
+  emulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    environment:
+      EMULATOR_CONTROL_TOKEN: ${EMULATOR_CONTROL_TOKEN:-emulator-control}
+    ports:
+      - "127.0.0.1:${EMULATOR_PUBLIC_PORT:-51080}:51080"
+      - "127.0.0.1:${EMULATOR_CONTROL_PORT:-51081}:51081"
+    volumes:
+      - state:/data
+    networks:
+      default:
+        aliases:
+          - arctex-emulator
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+volumes:
+  state:

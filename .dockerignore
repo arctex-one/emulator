@@ -1,0 +1,6 @@
+.git
+.generated
+dist
+internal/contract/openapi.json
+internal/contract/.openapi.*
+*.sqlite*

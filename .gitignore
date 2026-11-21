@@ -1,0 +1,7 @@
+/.generated/
+/internal/contract/openapi.json
+/dist/
+/emulator
+*.sqlite*
+
+/internal/contract/.openapi.*
