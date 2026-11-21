@@ -3,8 +3,8 @@ module github.com/arctex-one/emulator
 go 1.27.1
 
 require (
-	github.com/arctex-one/api-protocol-go v0.1.0
-	github.com/arctex-one/client-go v0.4.0
+	github.com/arctex-one/api-protocol-go v0.2.0
+	github.com/arctex-one/client-go v0.5.0
 	github.com/santhosh-tekuri/jsonschema/v6 v6.0.3
 	github.com/shopspring/decimal v1.6.0
 	modernc.org/sqlite v1.62.0
